@@ -131,10 +131,8 @@ celerybeat.pid
 .env
 .venv
 env/
-amb/
 venv/
 ENV/
-utils/
 env.bak/
 venv.bak/
 
@@ -171,3 +169,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Personal notes (not for version control)
+notes/
