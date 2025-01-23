@@ -11,7 +11,8 @@ def menu():
     print("4. Sequencia Fibonacci")
     print("5. Mínimo Múltiplo Comum")
     print("6. Índice de Massa Corporal")
-    print("7. Sair")
+    print("7. Calcular Hipotenusa")
+    print("8. Sair")
     try:
         return int(input("Digite o número da sua escolha: "))
     except ValueError:
@@ -172,6 +173,10 @@ def mmc(a, b):
             return maior
         maior += 1
 
+def pythagorean_theorem(a,b):
+    c = (a**2+ b**2)**0.5
+    return c
+
 # Mapeando as opções para as funções correspondentes
 opcoes = {
     1: lambda: print(f"Resultado do MDC: {calcular_mdc(int(input('A: ')), int(input('B: ')))}"),
@@ -180,12 +185,13 @@ opcoes = {
     4: lambda: print(f"Sequência Fibonacci: {fibonacci(int(input('Quantidade de termos: ')))}"),
     5: lambda: print(f"MMC: {mmc(int(input('A: ')), int(input('B: ')))}"),
     6: lambda: print(f"IMC: {classificar_imc(calcular_imc(float(input('Peso: ')), float(input('Altura: '))))}"),
+    7: lambda: print(f"Hipotenusa é igual a {pythagorean_theorem(float(input("Informe o cateto a: ")),float(input("Informe o cateto b: ")))}")
 }
 
 # Programa principal
 while True:
     escolha = menu()
-    if escolha == 7:
+    if escolha == 8:
         print("Saindo do programa...")
         break
     elif escolha in opcoes:
